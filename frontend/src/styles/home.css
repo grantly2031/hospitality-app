@@ -1,0 +1,55 @@
+/* home.css */
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 40px;
+    background-color: var(--white); /* White background imported from global.css */
+}
+
+.text-left {
+    width: 50%;
+}
+
+.text-left h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--primary-dark); /* Global primary dark color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow for readability */
+}
+
+.text-left p {
+    font-size: 21px;
+    color: var(--black); /* Global black color */
+    line-height: 1.6;
+}
+
+.image-right {
+    width: 40%;
+}
+
+.image-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .image-right {
+        display: none; /* Hide image on smaller screens */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center-align text */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .text-left {
+        width: 100%; /* Full width for text */
+        margin-bottom: 20px;
+    }
+}

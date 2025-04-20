@@ -1,0 +1,383 @@
+
+.caregiver-search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-header h1 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 500px;
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search-button {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent-light));
+  color: var(--white);
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 10%;
+  height: 50px;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-content {
+  display: flex;
+  gap: 30px;
+}
+
+.filters-sidebar {
+  width: 280px; /* Slightly wider */
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.filters-sidebar h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.filter-section {
+  margin-bottom: 20px; /* More space between sections */
+  border-bottom: 1px solid var(--primary-light);
+  padding-bottom: 15px;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px 0 10px 30px; /* More padding */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: var(--primary-dark);
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.filter-header:hover {
+  color: var(--accent-dark);
+}
+
+/* Checkmark only shows when section is open */
+.filter-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.filter-section.open .filter-header::before {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.filter-section.open .filter-header::after {
+  content: '✓';
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.toggle-icon {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: auto;
+  padding-left: 15px;
+  transition: transform 0.2s ease;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-options {
+  padding-top: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding-top 0.3s ease;
+}
+
+.filter-section.open .filter-options {
+  max-height: 500px;
+  padding-top: 15px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* More space between options */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--black);
+  padding: 8px 10px; /* Larger click area */
+  cursor: pointer;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: var(--gray);
+  color: var(--primary-dark);
+}
+
+.filter-options input[type="radio"],
+.filter-options input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary);
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filter-options input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filter-options input[type="checkbox"] {
+  border-radius: 3px;
+}
+
+.filter-options input[type="radio"]:checked,
+.filter-options input[type="checkbox"]:checked {
+  background-color: var(--primary);
+}
+
+.filter-options input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-options input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clear-filters {
+  width: 100%;
+  margin-top: 20px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-filters:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.caregiver-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.caregiver-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+.caregiver-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.caregiver-photo {
+  width: 120px;
+  height: 120px;]
+  border-radius: 10px;
+  /* object-fit: fill; */
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+}
+
+.caregiver-info {
+  flex: 1;
+}
+
+
+.caregiver-info h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+}
+
+.caregiver-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.caregiver-info strong {
+  color: var(--primary-dark);
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: var(--accent-dark);
+  background-color: var(--light-gray);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .search-content {
+    flex-direction: column;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .caregiver-card {
+    flex-direction: column;
+  }
+
+  .caregiver-photo {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .caregiver-search-container {
+    padding: 15px;
+  }
+
+  .search-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .caregiver-card {
+    padding: 15px;
+  }
+
+  .caregiver-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .caregiver-info p {
+    font-size: 14px;
+  }
+
+  .filter-header {
+    padding-left: 28px;
+  }
+
+  .filter-option {
+    padding: 8px;
+  }
+}

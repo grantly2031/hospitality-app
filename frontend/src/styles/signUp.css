@@ -1,0 +1,109 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      url('./images/signup1.jpg') no-repeat center center/cover, 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Darker gradient overlay */
+    z-index: -1; /* Places the background behind the content */
+    filter: brightness(0.4); /* Slightly darken the image */
+  }
+  
+  .signup-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--white); /* Change heading color to white */
+    text-align: center;
+    margin-bottom: 60px;
+    position: absolute;
+    top: 10%;
+    z-index: 1; /* Keeps the heading above the background */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* Adding shadow for better readability */
+  }
+  
+  .role-selection-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 100px;
+  }
+  
+  .role-button {
+    background-color: var(--primary-color);
+    color: var(--white); /* Set button text color to white (from global) */
+    font-size: 28px;
+    padding: 25px 60px;
+    width: 48%;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--form-border-radius);
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Keeps the buttons above the background */
+  }
+  
+  .role-button:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--white); /* Ensure text stays white on hover */
+  }
+  
+  .role-button:active {
+    background-color: var(--primary-color);
+  }
+  
+  .role-button:focus {
+    outline: none;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: var(--form-background-color);
+    border-radius: var(--form-border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: var(--form-border-radius);
+    border: 1px solid #ccc;
+    font-size: 18px;
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: var(--button-text-color); /* Set button text color to white (from global) */
+    padding: 15px 25px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--form-border-radius);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--white); /* Ensure text stays white on hover */
+  }
+  
+  button:active {
+    background-color: var(--primary-color);
+  }
+  

@@ -1,0 +1,576 @@
+/* Caregiver Detail Styles */
+.caregiver-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--black);
+    background-color: var(--primary-light);
+    min-height: 100vh;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    color: var(--accent-dark);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(200, 79, 73, 0.1);
+  }
+  
+  .caregiver-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .caregiver-photo-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+  }
+  
+  .caregiver-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .rating-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--header-bg);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .star-icon {
+    margin-right: 5px;
+    color: var(--white);
+  }
+  
+  .caregiver-info {
+    flex-grow: 1;
+  }
+  
+  .caregiver-info h1 {
+    margin: 0 0 10px 0;
+    color: var(--primary-dark);
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .caregiver-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: var(--black);
+  }
+  
+  .caregiver-meta span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .caregiver-meta svg {
+    margin-right: 5px;
+    color: var(--primary-dark);
+  }
+  
+  .caregiver-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .specialty-tag {
+    background-color: rgba(126, 214, 216, 0.2);
+    color: var(--primary-dark);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .caregiver-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-tertiary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    background: var(--header-bg);
+    color: var(--white);
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--white);
+    color: var(--accent-dark);
+    background: var(--header-bg);
+    color: var(--white);
+    border: 1px solid var(--accent-dark);
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(200, 79, 73, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .btn-tertiary {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  
+  .btn-tertiary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .caregiver-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+  }
+  
+  .caregiver-tabs button {
+    padding: 12px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .caregiver-tabs button:hover {
+    color: var(--accent-dark);
+  }
+  
+  .caregiver-tabs button.active {
+    color: var(--accent-dark);
+  }
+  
+  .caregiver-tabs button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--header-bg);
+    border-radius: 3px 3px 0 0;
+  }
+  
+  .caregiver-content {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-section {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .profile-column {
+    flex: 1;
+  }
+  
+  .profile-section h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+  }
+  
+  .profile-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--black);
+  }
+  
+  .languages-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .language-tag {
+    background-color: rgba(126, 214, 216, 0.2);
+    color: var(--primary-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .availability-days {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .day {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .day.available {
+    background-color: rgba(126, 214, 216, 0.3);
+    color: var(--primary-dark);
+  }
+  
+  .day.unavailable {
+    background-color: rgba(226, 127, 100, 0.2);
+    color: var(--accent-dark);
+  }
+  
+  .certifications-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  
+  .certifications-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cert-icon {
+    margin-right: 10px;
+    color: var(--primary-dark);
+  }
+  
+  .background-check {
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .background-check.verified {
+    background-color: rgba(126, 214, 216, 0.2);
+    color: var(--primary-dark);
+  }
+  
+  .background-check.unverified {
+    background-color: rgba(226, 127, 100, 0.2);
+    color: var(--accent-dark);
+  }
+  
+  .background-check svg {
+    margin-right: 10px;
+  }
+  
+  .review-card {
+    background-color: var(--card-dark);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .reviewer {
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  
+  .review-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .review-rating .star {
+    color: var(--accent-light);
+    margin-right: 3px;
+  }
+  
+  .review-date {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .review-comment {
+    line-height: 1.6;
+    color: var(--black);
+    margin: 0;
+  }
+  
+  .add-review {
+    background-color: var(--card-dark);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+  }
+  
+  .add-review h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .rating-input {
+    margin-bottom: 20px;
+  }
+  
+  .rating-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .stars span {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.2s;
+  }
+  
+  .stars span.selected {
+    color: var(--accent-light);
+  }
+  
+  .add-review textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s;
+  }
+  
+  .add-review textarea:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+  }
+  
+  .already-rated {
+    background-color: rgba(126, 214, 216, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .already-rated h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .already-rated p {
+    color: var(--black);
+    margin-bottom: 0;
+  }
+  
+  .booking-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .booking-form {
+    background-color: var(--card-dark);
+    border-radius: 8px;
+    padding: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input[type="date"]:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+  }
+  
+  .time-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .time-group > div {
+    flex: 1;
+  }
+  
+  .needs-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+  }
+  
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .checkbox-label:hover input ~ .checkmark {
+    background-color: #ddd;
+  }
+  
+  .checkbox-label input:checked ~ .checkmark {
+    background: var(--header-bg);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-label .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .caregiver-header {
+      flex-direction: column;
+    }
+    
+    .caregiver-photo-container {
+      margin: 0 auto 20px;
+    }
+    
+    .profile-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .needs-checkboxes {
+      grid-template-columns: 1fr;
+    }
+    
+    .time-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .caregiver-actions {
+      flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary, .btn-tertiary {
+      width: 100%;
+    }
+  }

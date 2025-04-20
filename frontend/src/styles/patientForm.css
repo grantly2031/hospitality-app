@@ -1,0 +1,310 @@
+/* patientForm.css */
+
+/* Base Styles */
+.form-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .form-subtitle {
+    font-size: 1.4rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 1.4;
+  }
+  
+  .form-columns {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-column {
+    flex: 1;
+  }
+  
+  /* Input Group Styling */
+  .input-group {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  }
+  
+  /* Name and Address Groups */
+  .name-container, .address-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .name-container > div, .address-group > div {
+    flex: 1;
+  }
+  
+  /* Date and Time Range Containers */
+  .date-range-container,
+  .time-range-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .date-range-container .input-field,
+  .time-range-container .input-field {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  
+  /* Checkbox Group */
+  .checkbox-group {
+    display: grid;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    position: relative;
+  }
+  
+  .checkbox-label:hover {
+    background: #ecf0f1;
+  }
+  
+  .custom-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+    border: solid #3498db;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Hours Calculation */
+  .hours-calculation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .calculate-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-weight: 500;
+  }
+  
+  .calculate-button:hover {
+    background: #2980b9;
+  }
+  
+  .total-hours {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+  
+  .total-hours strong {
+    color: #27ae60;
+    font-size: 1.3rem;
+  }
+  
+  /* Submit Button */
+  .form-actions {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .submit-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-weight: 600;
+  }
+  
+  .submit-button:hover {
+    background: #219a52;
+  }
+  
+  /* Accessibility Enhancements */
+  .required {
+    color: #e74c3c;
+    font-size: 1.2em;
+  }
+  
+  /* Date and Time Input Specific Styling */
+  input[type="date"],
+  input[type="time"] {
+    min-height: 44px; /* Minimum touch target size */
+    font-size: 1.1rem;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ecf0f1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .form-columns {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      padding: 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 2rem;
+    }
+  
+    .form-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .name-container,
+    .address-group,
+    .date-range-container,
+    .time-range-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hours-calculation {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+    }
+  
+    .checkbox-label {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-title {
+      font-size: 1.8rem;
+    }
+  
+    .form-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  
+    input, select {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  
+    .submit-button {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  /* Focus styles for better accessibility */
+  input:focus-visible,
+  select:focus-visible,
+  button:focus-visible {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+  }
+  
+  /* Error state styling (you can add this dynamically with JS) */
+  .input-error {
+    border-color: #e74c3c !important;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
